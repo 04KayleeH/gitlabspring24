@@ -1,5 +1,7 @@
 //contributors
 
+//th3cod3rbab3
+
 //Suave714
 //Paul JR Ngwoke
 // Dedman
@@ -24,7 +26,7 @@
 
 
 //AK
-
+// Basilio L.
 
 
 //Carlos
@@ -32,6 +34,7 @@
 //AK
 
 // dailycrocs
+
 
 #include <stdlib.h>
 #include <ctype.h>
@@ -43,6 +46,11 @@
 #include <math.h>
 
 
+void doorChoiceRoom9();
+
+
+int i_want_to_go_home_grandpa();
+void func37();
 
 void exploreRoom(int roomNo);
 void eyeGame(void);
@@ -137,6 +145,9 @@ int healthBar(bool damage, int currentHealth);
 
 void characterSelection(int num);
 
+char bossMove();
+
+void room49();
 
 void chooseDoor();
 void chooseWeapon();
@@ -159,6 +170,8 @@ void generateGold();
 void multiplicationGame();
 
 void dragonbarrowChoices();
+
+void guessGame();
 
 int main(int argc, char *argv[])
 {
@@ -229,6 +242,154 @@ int main(int argc, char *argv[])
 			case 3:
 			{
 				puts("room3");
+				//int main(void) {
+  
+				int choice = 1;
+
+  				while(choice >= 1 && choice <= 5)
+    					{
+    				printf("Oh no.. you have entered room 3.\n");
+			        printf("This should be fun.. Remember depending on what door you choose, you will have to make lots of choices..\n");
+			        printf("Let's begin choose from the following door: \n");
+			        printf("Door 1 \n Door 2 \n Door 3 \n Door 4 \n Door 5 \n Select -1 to Exit \n");
+			        printf("Whatever you do, do not choose Door 5 \n Okay now go ahead make your selection: ");
+    				scanf("%d",&choice);
+  
+ 			if (choice == 1)
+  			{
+     			int pick = -1 ;
+          		int array [] = {5,3,1,4,2};
+         		printf("\n");
+          		printf("Oh no you have selected to enter door 1.. \n"); 
+          		printf("In this room you will be told you fortune, I have created an array with 5 elements, you will pick a number 0-4, and depending on your choice you will be given a number in return, depending on the number you get back that will be your fortune..\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("Fortune List:\n");
+    
+       			printf("1. Never give up. You're not a failure if you don't give up.\n");
+       			printf("2. Hard work pays off in the future, laziness pays off now.\n ");
+       			printf("3. Now is the time to try something new.\n");
+       			printf("4. You learn from your mistakes... You will learn a lot today.\n");
+       			printf("5. A chance meeting opens new doors to success and friendship.\n"); 
+    			printf("\n");
+    			printf("\n");
+    
+        		while(pick < 0 || pick > 4)
+        		{
+        		printf("Pick a number 0-4: ");
+        		scanf(" %d", &pick); 
+        		}
+         		printf("Your fortune is: %d\n", array[pick]);   
+  			}
+  			else if (choice == 2)
+  			{
+    			int diceSize = 6;
+    			srand(time(NULL));
+   			int dice = rand() % diceSize; 
+    			int roll = 0;
+    			printf("You have entered door 2 \n");
+    			printf("In this room you will be given a dice to roll, you will get to choose a number between 1-6, do you think you will be able to guess the number you rolled? \n"); 
+    			printf("May the odds be ever in your favor.. \n");
+    			printf("Now whenever you are ready, enter the number you think you will roll:");
+    			scanf(" %d", & roll);
+    			while(roll >= 0 && roll <= 6)
+      			{
+   			 if (roll == dice)
+    			{
+      			printf("Congratulations you have guessed the number you rolled, you have won the game \n");
+      			break;
+    			}
+    			else
+    			{
+      			printf("Sorry you have not guessed the number you rolled, you have lost the game \n");
+      			printf("The number rolled was %d \n", dice);
+      			break;
+    			}	
+  				}		
+  					}
+
+  			else if (choice == 3)
+    
+ 			{
+    			int age = 0;
+    			printf("Sorry you have entered door 3,  here lives an angry alien, he will ask your age.\n");
+    			printf("Alien: Alright, spill the beans! How many years have you been hogging all the oxygen on this planet?\n");
+    			printf("Alien: Come on hurry up I don't have all day, enter your age here:");
+    			scanf(" %d", & age);
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("Alien: Hmmm, I see you are %d years old, just know that people are lying when they say age is just a number because you are old BYE!!\n",age);
+    
+ 			 }
+
+  			else if (choice == 4)
+  			{
+    			printf("Welcome to door four, in this room it will be endless wonders and boundless treasures!\n");
+    			printf("CONGRATS!!\n");
+    			printf("YOU HAVE\n");
+   	 		printf("W ........");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("O .......");
+    			printf("\n");
+   			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+  			printf("\n");
+    			printf("\n");
+   			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("sorry its stuck");
+   			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+    			printf("\n");
+   			 printf("\n");
+    			printf("\n");
+    			printf("Lets try this again ");
+    			printf("CONGRATS!! ... Oh, wait, scratch that. You've entered this room and behold... it is absolutely nothing BYE! \n");
+ 			 }  	
+
+  			 else if (choice == 5) 
+   			{
+    			 printf("You have entered door 5 \n");
+     			guessGame();
+   			}
+
+  			else if(choice == -1)
+ 			 {
+    				printf("You have exited the game from room 3\n");
+    				break;
+ 			 }		
+
+			  else
+  			{
+   		 printf("You made an invalid selection. Try again. \n");
+    
+			  }
+    
+    }
 				break;
 			}
 			case 4:
@@ -440,7 +601,26 @@ while (choice != 0)
 			case 7:
 			{
 				puts("room7");
-				break;
+        int options [] = {1, 3, 4 ,5, 2};
+        // int size = sizeof(rooms) / sizeof(rooms[0]);
+        int size = 5;
+
+        srand(time(NULL));
+        int r = rand() % size;
+
+        int sum = r;
+        printf("\nInitial Sum = %d",r);
+
+        while(sum != 10){
+            if(sum > 10)
+                sum = 0;
+            sum += options[i_want_to_go_home_grandpa()];
+            printf("\nCurrent Sum = %d", sum);
+          }
+        puts("\n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ \n");
+        puts("      Indeed... Funkos are the best!");
+        puts("\n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+        break;
 			}
 			case 8:
 			{
@@ -450,6 +630,214 @@ while (choice != 0)
 			case 9:
 			{
 				puts("room9");
+				int choice = 0;
+				char playerName[6];
+				srand(time(NULL));
+				    
+				printf("Please enter your player name: ");
+				scanf("%s", playerName);
+
+				printf("\nWelcome %s, to progress the story use the ENTER key during gameplay.\n", playerName);
+				doorChoiceRoom9();
+				while(choice != 6)
+				{
+					puts("\nWhat path do you decide to choose?");
+					puts("|Door 1: Straight ahead|Door 2: Left|Door 3: Right|Door 4: Behind you|Door 5: Circular latched door|(6 will quit the game at any point)");
+					scanf("%d", &choice);
+					switch(choice)
+					{
+						case 1:
+							{
+								puts("\n|You decided to go straight ahead and enter Door 1|\n");
+								while(getchar() != '\n');
+
+								printf("Once inside, the door you entered from closes leaving you in an identical room.");
+								while(getchar() != '\n');
+
+								printf("The voice from before calls out and states You have unfortunately guessed incorrectly and will have to be culled from the experiment.");
+								while(getchar() != '\n');
+
+								printf("The floor below you begins to open up from the middle exposing a pool of lava.");
+								while(getchar() != '\n');
+
+								printf("Ultimately, you succumb to the lava and perish.");
+								while(getchar() != '\n');
+
+								break;
+							}
+						case 2:
+							{
+								puts("\n|You decided to go left and enter Door 2|\n");
+								while(getchar() != '\n');
+
+								printf("Once inside, the door you entered from closes leaving you in an identical room.");
+								while(getchar() != '\n');
+
+								printf("The voice from before calls out and states You have passed the first section of the experiment but must face an adversary to proceed.");
+								while(getchar() != '\n');
+
+								printf("The door in front of you opens up and reveals a black bear.");
+								while(getchar() != '\n');
+
+								printf("The voice declares that you must fight against the bear in order to proceed to the next room.");
+								while(getchar() != '\n');
+
+								printf("Ultimately, you succumb to the bear and perish.");
+								while(getchar() != '\n');
+
+								break;
+							}
+						case 3:
+							{
+								puts("\n|You decided to go right and enter Door 3|\n");
+								while(getchar() != '\n');
+
+								printf("Once inside, the door you entered from closes leaving you in an identical room.");
+								while(getchar() != '\n');
+
+								printf("You have a moment of silence with the voice seemingly gone.");
+								while(getchar() != '\n');
+
+								printf("Linear cracks start to form on all parts of the walls around the room with a red hue escaping the cracks");
+								while(getchar() != '\n');
+
+								printf("The voice continues its abscence but a siren begins to blare in the room.");
+								while(getchar() != '\n');
+
+								printf("Laser beams escape through every crack leaving no room to avoid them.");
+								while(getchar() != '\n');
+
+								printf("Ultimately, you succumb to the laser beams and perish.");
+								while(getchar() != '\n');
+
+								break;
+							}
+						case 4:
+							{
+								char *rewardChoice[] = { "|CHOICE 1: $10,000,000|", "|CHOICE 2: 1 of 1 specially crafted Porche|", "|CHOICE 3:Luxury villa of your own|", "|CHOICE 4:Small remote island ownership|", "|CHOICE 5:Connections with influential figures|" };
+								int prizeChoice = 0;
+								puts("\n|You decided to go behind and enter Door 4|\n");
+								while(getchar() != '\n');
+
+								printf("Once inside, the door you entered from closes leaving you in an identical room.");
+								while(getchar() != '\n');
+
+								printf("The voice congratulates you and exclaims that you have chosen the correct door.");
+								while(getchar() != '\n');
+
+								printf("A shift in the ceiling appears and down comes a giant digital screen extended by a robotic arm.");
+								while(getchar() != '\n');
+
+								printf("The Screen projects 5 options to choose from.");
+								while(getchar() != '\n');
+
+								printf("The Voice proceeds to explain that a rewards was guaranteed for signing up for the experiment.");
+								while(getchar() != '\n');
+
+								printf("you ask the voice of your whereabouts and how you ended up in such a situation in confusion aftering finding out you signed up for this.");
+								while(getchar() != '\n');
+
+								printf("The voice explains you signed away your life in exchange for being in an 'experiment' for a chance to win expensive prizes after completion.");
+								while(getchar() != '\n');
+
+								printf("your situation was dire and you believed this was your only chance to get out of the crippling debt you've accumulated.");
+								while(getchar() != '\n');
+
+								printf("The voice then urges you to pick a prize presented on the digital screen.\n");
+								while(getchar() != '\n');
+
+								for(int i = 0; i < 5; i++)
+								{
+									printf("%s\n", rewardChoice[i]);
+								}
+								puts("Please pick a reward for completion of the experiment: ");
+								scanf("%d", &prizeChoice);
+								switch(prizeChoice)
+								{
+									case 1:
+										{
+											puts("\nCongratulations you have chosen |CHOICE 1: $10,000,000|.");
+											while(getchar() != '\n');
+											puts("You may attempt again if you wish to do so to unlock the other endings if not you may quit by inputing 6 at the selection menu.");
+											while(getchar() != '\n');
+											break;
+										}
+									case 2:
+										{
+											puts("\nCongratulations you have chosen |CHOICE 2: 1 of 1 specially crafted Porche|.");
+											while(getchar() != '\n');
+											puts("You may attempt again if you wish to do so to unlock the other endings if not you may quit by inputing 6 at the selection menu.");
+											while(getchar() != '\n');
+											break;
+										}
+									case 3:
+										{
+											puts("\nCongratulations you have chosen |CHOICE 3:Luxury villa of your own|.");
+											while(getchar() != '\n');
+											puts("You may attempt again if you wish to do so to unlock the other endings if not you may quit by inputing 6 at the selection menu.");
+											while(getchar() != '\n');
+											break;
+										}
+									case 4:
+										{
+											puts("\nCongratulations you have chosen |CHOICE 4:Small remote island ownership|.");
+											while(getchar() != '\n');
+											puts("You may attempt again if you wish to do so to unlock the other endings if not you may quit by inputing 6 at the selection menu.");
+											while(getchar() != '\n');
+											break;
+										}
+									case 5:
+										{
+											puts("\nCongratulations you have chosen |CHOICE 5:Connections with influential figures|.");
+											while(getchar() != '\n');
+											puts("You may attempt again if you wish to do so to unlock the other endings if not you may quit by inputing 6 at the selection menu.");
+											while(getchar() != '\n');
+											break;
+										}
+								}
+								break;
+							}
+						case 5:
+							{
+								int r = rand() % 61;
+								puts("\n|You decided to go down and attempt to open Door 5|\n");
+								while(getchar() != '\n');
+
+								printf("The door below has 5 latches that need to be taken care of before proceeding.");
+								while(getchar() != '\n');
+
+								printf("You manage to get all the latches within %d seconds and fall down to a lower level.", r);
+								while(getchar() != '\n');
+
+								printf("Unlike the previous room, you land on a platform in the middle of the room surround by water.");
+								while(getchar() != '\n');
+
+								printf("The voice returns and exclaims that you have chosen an incorrect door and will unfortunately become feed for their pets.");
+								while(getchar() != '\n');
+
+								printf("The sound of heavy gates opening comes from beneath the water.");
+								while(getchar() != '\n');
+
+								printf("Dozens of crocodiles ascend from the depths and begin heading your direction.");
+								while(getchar() != '\n');
+
+								printf("Ultimately, you succumb to the crocodiles and perish.");
+								while(getchar() != '\n');
+
+								break;
+							}
+						case 6:
+							{
+								puts("You have decided to end the game.");
+								break;
+							}
+							           
+							 default:
+							{
+								puts("Invalid input entered.");
+							}
+					}
+				}
 				break;
 			}
 			case 10:
@@ -2659,8 +3047,88 @@ while (choice != 0)
 
       case 37:
       {
-        puts("room37");
-        break;
+        int c = 0;
+	int r;
+	int rgb[3];//0,red 1,green 2,blue
+	puts("room37");
+	puts("You have entered the scary door.");
+	
+	while(c != 6)
+	{
+		puts("There are 5 items lying in front of you:");
+		puts("1: speedy socks");
+		puts("2: infinite water bucket");
+		puts("3: a lemon");
+		puts("4: half baked cake");
+		puts("5: bag of marbles");
+		puts("6: leave room...");
+
+		scanf("%d", &c);
+		printf("\nyou chose: %d\n",c);
+
+		if(c == 1)
+		{
+			puts("You can now run very fast, but only in room37.");
+		}
+		else if(c == 2)
+		{
+			puts("You have a bucket of water, use it infinitely, but once you leave room37, the bucket disapears");
+		}
+		else if(c == 3)
+		{
+			puts("You have received a lemon.");
+			puts("Would you like to eat the lemon? 1 yes, 2 no");
+			int a;
+			scanf("%d",&a);
+			if(a == 1)
+			{
+				func37();
+				puts("You hear something off in the distance, but choose to cover your ears...");
+				puts("A lemon sprouts from the ground magically");
+			}
+			else
+			{
+				puts("You tossed the lemon away.");
+			}
+		}
+		else if(c == 4)
+		{
+			puts("You havea a baked cake now.");
+			puts("Would you like to eat it? 1 yes, 2 no");
+			int b;
+			scanf("%d",&b);
+			if(b==1)
+			{
+				puts("You ate the cake, tummy is filled :)\n another cake reappears");
+			}
+			else
+			{
+				puts("You placed the cake on floor.");
+			}
+		}
+		else if(c == 5)
+		{
+			srand(time(NULL));
+			r = rand();
+			while(r%3 != 0)
+			{
+				r = rand()%1000;
+			}
+			rgb[0] = r/3;
+			rgb[1] = r/3;
+			rgb[2] = r/3;
+			printf("You got %d marbles!!!\n",r);
+			printf("red marbles: %d\n",rgb[0]);
+			printf("green marbles: %d\n",rgb[1]);
+			printf("blue marbles: %d\n",rgb[2]);
+			puts("another bag of marble reappears");
+		}
+		else
+		{
+			break;//back to menu
+		}
+	}
+	break;
       }
 
 			case 38:
@@ -3471,7 +3939,7 @@ printf("You may now go back to the main room now. GOOD LUCK \n)");
 			}
 			case 49:
 			{
-				puts("room49");
+				room49();
 				break;
 			}
 			case 50:
@@ -3543,6 +4011,1123 @@ printf("You may now go back to the main room now. GOOD LUCK \n)");
 	puts("Game Over");
 	return EXIT_SUCCESS;
 }
+
+	void guessGame()
+	{
+  		int size = 10;
+ 	 	srand(time(NULL));
+  		int randomNum = rand() % size; 
+  		int rand = 0;
+  
+  		printf("Oh no, you have entered the Guessing Game.\n");
+  		printf("I am thinking of a number try to guess what number I have selected between 1 and 10:\n");
+  		printf("When ever you are ready, enter a number: \n");
+  		scanf(" %d", &rand);
+  			while(rand <= 10 && rand >= 1)
+  			{
+    				if (rand == randomNum)
+    				{
+      					printf("Darn, we selected the same number! \n");
+      					printf("You win this time we will meet again, and I will make sure I win next time. \n");
+      				break;
+    				}
+    				else
+    				{
+      					printf("Haha I knew you would never guess my number, sadly we did not select the same number. \n");
+      					printf("I selected %d \n", randomNum);
+      					printf("You lost this game. Haha Loser!! \n");
+      					break;
+    				}	
+  			}
+	}		
+
+
+
+
+
+
+
+char bossMove()
+{
+	    srand(time(NULL));
+	        char move[] = {'a','m','g','i'};
+		    int  enemyChoice = rand() % 5;
+
+		        if(enemyChoice == 3)
+				    {
+					            return move[3];
+						        }
+			    else if(enemyChoice == 2)
+				        {
+						        return move[2];
+							    }
+			        else if(enemyChoice == 1)
+					    {
+						            return move[1];
+							        }
+				    else
+					        {
+							        return move[0];
+								    }
+}
+
+
+
+
+
+
+
+
+
+
+void room49()
+{
+	srand(time(NULL));
+
+	    int level = 2;
+	        int hp = rand() % 10 + 39;
+		    int attack = rand() % 11 + 13;
+		        int defense = rand() % 9 + 13;
+			    int magic = rand() % 9 + 13;
+			        int agility = rand() % 12 + 14;
+				    int luck = rand() % 9 + 10;
+
+				        int maxhp = hp;
+
+					    int bosshp = 45;
+					        int bossattack = 15;
+						    int bossdefense = 38;
+						        int bossmagic = 12;
+							    int bossagility = rand() % 18 + 12;
+							        int bossluck = rand() % 15 + 6;
+
+								    int bossmaxhp = bosshp;
+
+								        int choiceBattle = 0;
+
+									    printf("> You pick this door.\n");
+									        printf("> A bright light appeared and you find yourself in front of a male mage.\n");
+										    printf("Male mage: hey my name is Rex and I need your help with this enemy. No time to explain!\n");
+
+										        printf("> The Madam Dawn appeared in front of you!\n");
+
+											    printf(" Looks like we have to fight! Look at your choices and pick carefully!\n");
+
+											        while(bosshp > 0 && hp > 0)
+													    {
+														            printf("What will you do?\n");
+															            printf("1) Attack\n2) Magic\n3) Items\n4) Guard\n5) Status Report\n");
+																            printf(">: ");
+																	            scanf(" %d",&choiceBattle);
+
+																		            switch(choiceBattle)
+																				            {
+
+																						                case 1:
+																									            {
+																											                    char result = bossMove();
+																													                    
+
+																													                    switch(result)
+																																                    {
+																																			                        case 'a':
+																																							                    {
+																																										                            printf("> You attempt to attack the enemy\n");
+																																													                            int agilitycheck = (rand() % 9 + (agility - bossagility)) % 5;
+
+																																																                            if(agilitycheck == 2 || agilitycheck == 4 )
+																																																				                            {
+																																																								                                printf("> The enemy dodged your attack\n");
+																																																												                        }
+
+																																																			                            else
+																																																							                            {
+																																																											                                int damage = (bossdefense + bossagility) - attack;
+
+																																																															                            int luckcheck = rand() % 3 +  luck % 5;
+
+																																																																		                                if(luckcheck < 2)
+																																																																							                            {
+																																																																											                                    damage = attack * 5;
+																																																																															                                    bosshp = bosshp - damage;
+
+																																																																																			                                    printf("SMAAAAAAAAAAAAAAAAASSSSHHHHING\n");
+																																																																																							                                    printf("You landed a hit!\n The enemy took -%d as damage.\n", damage);
+
+																																																																																											                                    if(bosshp < 0)
+																																																																																																                                    {
+																																																																																																					                                        printf("The enemy is DEAD!\n");
+																																																																																																										                                    break;
+																																																																																																														                                    }
+																																																																																															                                    else
+																																																																																																				                                    {
+																																																																																																									                                        printf("> he is suppose not to be alive now though!!\n");
+																																																																																																														                                }
+																																																																																																			                                }
+																																																																						                            else
+																																																																										                                {
+																																																																															                                if(damage > 20)
+																																																																																				                                {
+																																																																																									                                    int playerhit = rand() % 5;
+																																																																																													                                        playerhit = playerhit + (attack/2);
+																																																																																																		                                    bosshp = bosshp - playerhit;
+																																																																																																						                                        printf("You landed a hit!\n The enemy took -%d as damage.\n", playerhit);
+																																																																																																											                                }
+																																																																																			                                else
+																																																																																								                                {
+																																																																																													                                    bosshp = bosshp - abs((bossdefense + bossagility) - abs((damage + attack) * 2));
+
+																																																																																																	                                        printf("You landed a hit!\n The enemy took -%d as damage.\n", abs(damage+attack));
+																																																																																																						                                }
+																																																																																							                            }
+																																																																									                            }
+
+																																																						                            agilitycheck = (agility - bossagility) % 7;
+
+																																																									                            if(agilitycheck > 2)
+																																																													                            {
+																																																																	                                printf("> You dodged the enemy attack\n");
+																																																																					                        }
+
+																																																												                            else
+																																																																                            {
+																																																																				                                int guardcheck = agility + defense;
+
+																																																																								                            if(guardcheck > 20)
+																																																																												                                {
+																																																																																	                                int enemyhit = rand() % 10 + 1;
+
+																																																																																					                                hp = hp - enemyhit;
+
+																																																																																									                                printf("> The enemy did -%d damage to you!\n", enemyhit);
+																																																																																													                            }
+
+																																																																											                                else
+																																																																																                            {
+																																																																																				                                    int enemyhit = (defense + agility) - bossattack;
+
+																																																																																								                                    hp = hp - enemyhit;
+
+																																																																																												                                    printf("> The enemy did -%d damage to you!\n", enemyhit);
+																																																																																																                                }
+																																																																															                        }
+
+																																																															                            break;
+																																																																		                        }
+																																									                        case 'm':
+																																									                        {
+																																													                        printf("> You attempt to attack the enemy\n");
+																																																                        int agilitycheck = (rand() % 9 + (agility - bossagility)) % 5;
+
+																																																			                        if(agilitycheck == 2 || agilitycheck == 4 )
+																																																							                        {
+																																																											                            printf("> The enemy dodged your attack\n");
+																																																														                            }
+
+																																																						                        else
+																																																										                        {
+																																																														                            int damage = (bossdefense + bossagility) - attack;
+
+																																																																	                                int luckcheck = rand() % 3 +  luck % 5;
+
+																																																																					                            if(luckcheck < 2)
+																																																																									                                {
+																																																																														                                damage = attack * 5;
+																																																																																		                                bosshp = bosshp - damage;
+
+																																																																																						                                printf("SMAAAAAAAAAAAAAAAAASSSSHHHHING\n");
+																																																																																										                                printf("You landed a hit!\n The enemy took -%d as damage.\n", damage);
+
+																																																																																														                                if(bosshp < 0)
+																																																																																																			                                {
+																																																																																																								                                    printf("The enemy is DEAD!\n");
+																																																																																																												                                    }
+																																																																																																		                                else
+																																																																																																							                                {
+																																																																																																												                                    printf("> he is suppose not to be alive now though!!\n");
+																																																																																																																                                    }
+																																																																																																						                            }
+																																																																								                                else
+																																																																													                            {
+																																																																																	                                    if(damage > 20)
+																																																																																						                                    {
+																																																																																											                                        int playerhit = rand() % 5;
+																																																																																																                                    playerhit = playerhit + (attack/2);
+																																																																																																				                                        bosshp = bosshp - playerhit;
+																																																																																																									                                    printf("You landed a hit!\n The enemy took -%d as damage.\n", playerhit);
+																																																																																																													                                    }
+																																																																																					                                    else
+																																																																																										                                    {
+																																																																																															                                        bosshp = bosshp - abs((bossdefense + bossagility) - abs((damage + attack) * 2));
+
+																																																																																																				                                    printf("You landed a hit!\n The enemy took -%d as damage.\n", abs(damage+ attack));
+																																																																																																								                                    }
+																																																																																									                                }
+																																																																												                        }
+																																																									                        agilitycheck = (agility - bossagility) % 7;
+
+																																																												                        if(agilitycheck > 2)
+																																																																                        {
+																																																																				                            printf("> You dodged the enemy attack\n");
+																																																																							                            }
+
+																																																															                        else
+																																																																			                        {
+																																																																							                            int bossspell = rand() % 4;
+
+																																																																										                                printf("> The Madam Dawn");
+																																																																														                            printf(" attempted to use magic\n");
+
+																																																																																	                                if(bossspell == 0)
+																																																																																						                            {
+																																																																																										                                    int cure = rand() % 10;
+
+																																																																																														                                    int levelofcure = cure % 3;
+
+																																																																																																		                                    printf("> The Madam Dawn uses cure\n");
+
+																																																																																																						                                    if(bosshp >= maxhp)
+																																																																																																											                                    {
+																																																																																																																                                        printf("> But she is already at max health\n");
+																																																																																																																					                                }
+
+																																																																																																										                                    else
+																																																																																																															                                    {
+																																																																																																																				                                        if(levelofcure == 0)
+																																																																																																																										                                    {
+																																																																																																																															                                            bosshp = bosshp + 10;
+																																																																																																																																				                                            printf("> She is healed with +10\n");
+																																																																																																																																									                                        }
+																																																																																																																									                                    else if(levelofcure == 1)
+																																																																																																																														                                        {
+																																																																																																																																				                                        bosshp = bosshp + 7;
+																																																																																																																																									                                        printf("> She is healed with +7\n");
+																																																																																																																																														                                    }
+																																																																																																																													                                        else
+																																																																																																																																			                                    {
+																																																																																																																																								                                            bosshp = bosshp +5;
+																																																																																																																																													                                            printf("> She is healed with +5\n");
+																																																																																																																																																		                                        }
+
+																																																																																																																																		                                }
+																																																																																																														                                }
+
+																																																																																					                            else if(bossspell == 1)
+																																																																																									                                {
+																																																																																														                                int icemagic = rand() % 7 + 4;
+
+																																																																																																		                                icemagic = icemagic + magic;
+
+																																																																																																						                                int damage = defense - icemagic;
+
+																																																																																																										                                if(damage < 8)
+																																																																																																															                                {
+																																																																																																																				                                    hp = hp - abs(icemagic);
+																																																																																																																								                                        printf("> She used ice spell and did -%d damage to you\n", icemagic);
+																																																																																																																													                                }
+																																																																																																														                                else
+																																																																																																																			                                {
+																																																																																																																								                                    hp = hp - abs(damage);
+																																																																																																																												                                        printf("> She used ice spell and did -%d damage to you\n", abs(damage));
+																																																																																																																																	                                }
+
+																																																																																																																		                            }
+
+																																																																																								                                else
+																																																																																													                            {
+																																																																																																	                                    int firemagic = rand() % 7 + 4;
+
+																																																																																																					                                    firemagic = firemagic + magic;
+
+																																																																																																									                                    int damage = defense - firemagic;
+
+																																																																																																													                                    if(damage < 8)
+																																																																																																																		                                    {
+																																																																																																																							                                        hp = hp - abs(firemagic);
+																																																																																																																												                                    printf("> She used fireball and did -%d damage to you\n", firemagic);
+																																																																																																																																                                    }
+																																																																																																																	                                    else
+																																																																																																																						                                    {
+																																																																																																																											                                        hp = hp - abs(damage);
+																																																																																																																																                                    printf("> She used fireball and did -%d damage to you\n", abs(damage));
+																																																																																																																																				                                    }
+																																																																																																																					                                }
+																																																																																												                        }
+
+																																																																		                        break;
+																																																																					                    }
+																																												                    case 'g':
+																																												                    {
+																																															                            printf("> You attempt to attack the enemy\n");
+																																																		                            int agilitycheck = (rand() % 9 + (agility - bossagility)) % 5;
+
+																																																					                            if(agilitycheck == 2 || agilitycheck == 4 )
+																																																									                            {
+																																																													                                printf("> The enemy dodged your attack\n");
+																																																																	                        }
+
+																																																								                            else
+																																																												                            {
+																																																																                                int damage = (attack/2);
+																																																																				                            int luckcheck = rand() % 3 +  luck % 5;
+
+																																																																							                                if(luckcheck < 2)
+																																																																												                            {
+																																																																																                                    damage = attack * 2;
+																																																																																				                                    bosshp = bosshp - damage;
+
+																																																																																								                                    printf("SMAAAAAAAAAAAAAAAAASSSSHHHHING\n");
+																																																																																												                                    printf("You landed a hit!\n The enemy took %d as damage.\n", damage);
+
+																																																																																																                                    if(bosshp < 0)
+																																																																																																					                                    {
+																																																																																																										                                        printf("The enemy is DEAD!\n");
+																																																																																																															                                }
+																																																																																																				                                    else
+																																																																																																									                                    {
+																																																																																																														                                        printf("> he is suppose not to be alive now though!!\n");
+																																																																																																																			                                }
+																																																																																																								                                }
+																																																																											                            else
+																																																																															                                {
+																																																																																				                                if(damage > 20)
+																																																																																									                                {
+																																																																																														                                    int playerhit = rand() % 4 + 3;
+																																																																																																		                                        bosshp = bosshp - playerhit;
+																																																																																																							                                    printf("You landed a hit!\n The enemy took %d as damage.\n", playerhit);
+																																																																																																											                                    }
+																																																																																								                                else
+																																																																																													                                {
+																																																																																																		                                    bosshp = bosshp - (damage-2);
+
+																																																																																																						                                        printf("You landed a hit!\n The enemy took -%d as damage.\n", (damage-2));
+																																																																																																											                                }
+																																																																																												                            }
+
+																																																																														                                agilitycheck = (agility - bossagility) % 7;
+
+																																																																																		                            if(agilitycheck > 2)
+																																																																																						                                {
+																																																																																											                                printf("> You dodged the enemy attack\n");
+																																																																																															                            }
+
+																																																																																					                                else
+																																																																																										                            {
+																																																																																														                                    printf("> The Madam Dawn is on guard.\n");
+																																																																																																		                                }
+																																																																																									                        }
+																																																											                            break;
+																																																														                        }
+																																														                        default:
+																																														                        {
+																																																		                        int damage = (bossdefense + bossagility) - attack;
+																																																					                        int luckcheck = rand() % 3 +  luck % 5;
+
+																																																								                        if(luckcheck < 2)
+																																																												                        {
+																																																																                            damage = attack * 2;
+																																																																			                                bosshp = bosshp - damage;
+
+																																																																							                            printf("SMAAAAAAAAAAAAAAAAASSSSHHHHING\n");
+																																																																										                                printf("You landed a hit!\n The enemy took %d as damage.\n", damage);
+
+																																																																														                            if(bosshp < 0)
+																																																																																		                                {
+																																																																																							                                printf("The enemy is DEAD!\n");
+																																																																																											                            }
+																																																																																	                                else
+																																																																																						                            {
+																																																																																										                                    printf("> he is suppose not to be alive now though!!\n");
+																																																																																														                                }
+																																																																																					                        }
+																																																											                        else
+																																																															                        {
+																																																																			                            if(damage > 20)
+																																																																							                                {
+																																																																												                                int playerhit = rand() % 5;
+																																																																																                                playerhit = playerhit + (attack/2);
+																																																																																				                                bosshp = bosshp - playerhit;
+																																																																																								                                printf("You landed a hit!\n The enemy took -%d as damage.\n", playerhit);
+																																																																																												                            }
+																																																																						                                else
+																																																																											                            {
+																																																																															                                    bosshp = bosshp - abs((bossdefense + bossagility) - abs((damage + attack) * 2));
+
+																																																																																			                                    printf("You landed a hit!\n The enemy took -%d as damage.\n", abs(damage+ attack));
+																																																																																							                                }
+																																																																										                        }
+
+																																																														                        printf(">: The Madam Dawn uses an item\n");
+
+																																																																	                        if(bosshp >= bossmaxhp)
+																																																																					                        {
+																																																																									                            printf("> The Madam Dawn health is full.\n");
+																																																																												                            }
+																																																																				                        else
+																																																																								                        {
+																																																																												                            bosshp = bosshp + 10;
+
+																																																																															                                printf("> The Madam Dawn health went up by +10.\n");
+																																																																																			                        }
+																																																																							                    }
+																																																	                }
+
+																															                    break;
+																																	                }
+																										                case 2:
+																										                {
+																													                char result = bossMove();
+																															                printf("%c\n", result);
+
+																																	                switch(result)
+																																				                {
+																																							                    case 'a':
+																																										                        {
+																																														                        int usemagic = rand() % 2;
+
+																																																	                        printf("> ");
+																																																				                        printf("Attempted to use magic\n");
+
+																																																							                        if(usemagic == 0)
+																																																											                        {
+																																																															                            int cure = rand() % 10;
+
+																																																																		                                int levelofcure = cure % 3;
+
+																																																																						                            printf("Your companion used a healing spell on you!\n");
+
+																																																																									                                if(hp >= maxhp)
+																																																																														                            {
+																																																																																		                                    printf("> But you are already at max health\n");
+																																																																																						                                }
+
+																																																																													                            else
+																																																																																	                                {
+																																																																																						                                if(levelofcure == 0)
+																																																																																											                                {
+																																																																																																                                    hp = hp + 25;
+																																																																																																				                                        printf("> You were healed with +25\n");
+																																																																																																									                                }
+																																																																																										                                else if(levelofcure == 1)
+																																																																																															                                {
+																																																																																																				                                    hp = hp + 10;
+																																																																																																								                                        printf("> You were healed with +10\n");
+																																																																																																													                                }
+																																																																																														                                else
+																																																																																																			                                {
+																																																																																																								                                    hp = hp + 8;
+																																																																																																												                                        printf("> You were healed with +8\n");
+																																																																																																																	                                }
+
+																																																																																																		                            }
+																																																																																                            }
+
+																																																										                        else
+																																																														                        {
+																																																																		                            int firemagic = rand() % 8;
+
+																																																																					                                firemagic = firemagic + magic;
+
+																																																																									                            int damage = bossdefense - firemagic;
+
+																																																																												                                bosshp = bosshp - abs(damage);
+																																																																																                            printf("> Your companion used fireball and did -%d damage to the enemy\n", abs(damage));
+																																																																																			                            }
+
+																																																													                        int agilitycheck = (rand() % 9 + (agility - bossagility)) % 5;
+
+																																																																                        agilitycheck = (agility - bossagility) % 7;
+
+																																																																			                        if(agilitycheck > 2)
+																																																																							                        {
+																																																																											                            printf("> You dodged the enemy attack\n");
+																																																																														                            }
+
+																																																																						                        else
+																																																																										                        {
+																																																																														                            int guardcheck = agility + defense;
+
+																																																																																	                                if(guardcheck > 20)
+																																																																																						                            {
+																																																																																										                                    int enemyhit = rand() % 10 + 1;
+
+																																																																																														                                    hp = hp - enemyhit;
+
+																																																																																																		                                    printf("> The Madam Dawn did -%d damage to you!\n", enemyhit);
+																																																																																																						                                }
+
+																																																																																					                            else
+																																																																																									                                {
+																																																																																														                                int enemyhit = (defense + agility) - bossattack;
+
+																																																																																																		                                hp = hp - enemyhit;
+
+																																																																																																						                                printf("> The Madam Dawn did -%d damage to you!\n", enemyhit);
+																																																																																																										                            }
+																																																																																								                            }
+																																																																									                        break;
+																																																																												                    }
+																																													                    case 'm':
+																																													                    {
+																																																                            int usemagic = rand() % 2;
+
+																																																			                            printf("> ");
+																																																						                            printf("Attempted to use magic\n");
+
+																																																									                            if(usemagic == 0)
+																																																													                            {
+																																																																	                                int cure = rand() % 10;
+
+																																																																					                            int levelofcure = cure % 3;
+
+																																																																								                                printf("Your companion steps in to heal you with a healing spell!\n");
+
+																																																																												                            if(hp >= maxhp)
+																																																																																                                {
+																																																																																					                                printf("> But you are already at max health\n");
+																																																																																									                            }
+
+																																																																															                                else
+																																																																																				                            {
+																																																																																								                                    if(levelofcure == 0)
+																																																																																													                                    {
+																																																																																																		                                        hp = hp + 25;
+																																																																																																							                                    printf("> You were healed with +25\n");
+																																																																																																											                                    }
+																																																																																												                                    else if(levelofcure == 1)
+																																																																																																	                                    {
+																																																																																																						                                        hp = hp + 10;
+																																																																																																											                                    printf("> You were healed with +10\n");
+																																																																																																															                                    }
+																																																																																																                                    else
+																																																																																																					                                    {
+																																																																																																										                                        hp = hp + 8;
+																																																																																																															                                    printf("> You were healed with +8\n");
+																																																																																																																			                                    }
+
+																																																																																																				                                }
+																																																																																			                        }
+
+																																																												                            else
+																																																																                            {
+																																																																				                                int firemagic = rand() % 7;
+
+																																																																								                            firemagic = firemagic + magic;
+
+																																																																											                                int damage = bossdefense - firemagic;
+
+																																																																															                            bosshp = bosshp - abs(damage);
+																																																																																		                                printf("> He used fireball and did -%d damage to the enemy\n", abs(damage));
+																																																																																						                        }
+
+																																																															                            int bossspell = rand() % 4;
+
+																																																																		                            printf("> The Madam Dawn");
+																																																																					                            printf(" attempted to use magic\n");
+
+																																																																								                            if(bossspell == 0)
+																																																																												                            {
+																																																																																                                int cure = rand() % 10;
+
+																																																																																				                            int levelofcure = cure % 3;
+
+																																																																																							                                printf("> The Madam Dawn uses cure\n");
+
+																																																																																											                            if(bosshp >= maxhp)
+																																																																																															                                {
+																																																																																																				                                printf("> But she is already at max health\n");
+																																																																																																								                            }
+
+																																																																																														                                else
+																																																																																																			                            {
+																																																																																																							                                    if(levelofcure == 0)
+																																																																																																												                                    {
+																																																																																																																	                                        bosshp = bosshp + 10;
+																																																																																																																						                                    printf("> She is healed with +10\n");
+																																																																																																																										                                    }
+																																																																																																											                                    else if(levelofcure == 1)
+																																																																																																																                                    {
+																																																																																																																					                                        bosshp = bosshp + 7;
+																																																																																																																										                                    printf("> She is healed with +7\n");
+																																																																																																																														                                    }
+																																																																																																															                                    else
+																																																																																																																				                                    {
+																																																																																																																									                                        bosshp = bosshp +5;
+																																																																																																																														                                    printf("> She is healed with +5\n");
+																																																																																																																																		                                    }
+
+																																																																																																																			                                }
+																																																																																																		                        }
+
+																																																																											                            else if(bossspell == 1)
+																																																																															                            {
+																																																																																			                                int icemagic = rand() % 7 + 4;
+
+																																																																																							                            icemagic = icemagic + magic;
+
+																																																																																										                                int damage = defense - icemagic;
+
+																																																																																														                            if(damage < 8)
+																																																																																																		                                {
+																																																																																																							                                hp = hp - abs(icemagic);
+																																																																																																											                                printf("> The Madam Dawn used ice spell and did -%d damage to you\n", icemagic);
+																																																																																																															                            }
+																																																																																																	                                else
+																																																																																																						                            {
+																																																																																																										                                    hp = hp - abs(damage);
+																																																																																																														                                    printf("> The Madam Dawn used ice spell and did -%d damage to you\n", abs(damage));
+																																																																																																																		                                }
+																																																																																																					                        }
+
+																																																																														                            else
+																																																																																		                            {
+																																																																																						                                int firemagic = rand() % 7 + 4;
+
+																																																																																										                            firemagic = firemagic + magic;
+
+																																																																																													                                int damage = defense - firemagic;
+
+																																																																																																	                            if(damage < 8)
+																																																																																																					                                {
+																																																																																																										                                hp = hp - abs(firemagic);
+																																																																																																														                                printf("> The Madam Dawn used fireball and did -%d damage to you\n", firemagic);
+																																																																																																																		                            }
+																																																																																																				                                else
+																																																																																																									                            {
+																																																																																																													                                    hp = hp - abs(damage);
+																																																																																																																	                                    printf("> The Madam Dawn used fireball and did -%d damage to you\n", abs(damage));
+																																																																																																																					                                }
+
+																																																																																																								                        }
+
+																																																																																	                            break;
+																																																																																				                        }
+																																															                        case 'g':
+																																															                        {
+																																																			                        int usemagic = rand() % 2;
+
+																																																						                        printf("> ");
+																																																									                        printf("Attempted to use magic\n");
+
+																																																												                        if(usemagic == 0)
+																																																																                        {
+																																																																				                            int cure = rand() % 10;
+
+																																																																							                                int levelofcure = cure % 3;
+
+																																																																											                            printf(" Your companion uses his healing spell on you!\n");
+
+																																																																														                                if(hp >= maxhp)
+																																																																																			                            {
+																																																																																							                                    printf("> But you are already at max health\n");
+																																																																																											                                }
+
+																																																																																		                            else
+																																																																																						                                {
+																																																																																											                                if(levelofcure == 0)
+																																																																																																                                {
+																																																																																																					                                    hp = hp + 25;
+																																																																																																									                                        printf("> You were healed with +25\n");
+																																																																																																														                                }
+																																																																																															                                else if(levelofcure == 1)
+																																																																																																				                                {
+																																																																																																									                                    hp = hp + 10;
+																																																																																																													                                        printf("> You were healed with +10\n");
+																																																																																																																		                                }
+																																																																																																			                                else
+																																																																																																								                                {
+																																																																																																													                                    hp = hp + 8;
+																																																																																																																	                                        printf("> You were healed with +8\n");
+																																																																																																																						                                }
+
+																																																																																																							                            }
+																																																																																					                            }
+
+																																																															                        else
+																																																																			                        {
+																																																																							                            int firemagic = rand() % 7;
+
+																																																																										                                firemagic = firemagic + magic;
+
+																																																																														                            int damage = bossdefense - firemagic;
+
+																																																																																	                                bosshp = bosshp - abs(damage);
+																																																																																					                            printf("> He used fireball and did -%d damage to the enemy\n", abs(damage));
+																																																																																								                            }
+
+																																																																		                        printf("> The Madam Dawn guarded herself.\n");
+
+																																																																					                        break;
+																																																																								                    }
+																																																		                    default:
+																																																		                    {
+																																																					                            int usemagic = rand() % 2;
+
+																																																								                            printf("> ");
+																																																											                            printf("Attempted to use magic\n");
+
+																																																														                            if(usemagic == 0)
+																																																																		                            {
+																																																																						                                int cure = rand() % 10;
+
+																																																																										                            int levelofcure = cure % 3;
+
+																																																																													                                printf(" Your companion decided to use his healing spell on you!\n");
+
+																																																																																	                            if(hp >= maxhp)
+																																																																																					                                {
+																																																																																										                                printf("> But you are already at max health\n");
+																																																																																														                            }
+
+																																																																																				                                else
+																																																																																									                            {
+																																																																																													                                    if(levelofcure == 0)
+																																																																																																		                                    {
+																																																																																																							                                        hp = hp + 25;
+																																																																																																												                                    printf("> You were healed with +25\n");
+																																																																																																																                                    }
+																																																																																																	                                    else if(levelofcure == 1)
+																																																																																																						                                    {
+																																																																																																											                                        hp = hp + 10;
+																																																																																																																                                    printf("> You were healed with +10\n");
+																																																																																																																				                                    }
+																																																																																																					                                    else
+																																																																																																										                                    {
+																																																																																																															                                        hp = hp + 8;
+																																																																																																																				                                    printf("> You were healed with +8\n");
+																																																																																																																								                                    }
+
+																																																																																																									                                }
+																																																																																								                        }
+
+																																																																	                            else
+																																																																					                            {
+																																																																									                                int firemagic = rand() % 7;
+
+																																																																													                            firemagic = firemagic + magic;
+
+																																																																																                                int damage = bossdefense - firemagic;
+
+																																																																																				                            bosshp = bosshp - abs(damage);
+																																																																																							                                printf("> He used fireball and did -%d damage to the enemy\n", abs(damage));
+																																																																																											                        }
+
+																																																																				                            printf(">: The Madam Dawn uses an item\n");
+
+																																																																							                            if(bosshp >= bossmaxhp)
+																																																																											                            {
+																																																																															                                printf("> The Madam Dawn health is full.\n");
+																																																																																			                        }
+																																																																										                            else
+																																																																														                            {
+																																																																																		                                bosshp = bosshp + 10;
+
+																																																																																						                            printf("> The Madam Dawn health went up by +10.\n");
+																																																																																									                            }
+																																																																													                        }
+																																																				                    }
+
+																																			                break;
+																																					            }
+																												            case 3:
+																												            {
+
+																														                    printf("> Your companion healed you with his healing item\n");
+
+																																                    if(hp >= maxhp)
+																																			                    {
+																																						                        printf("> You are already at max health\n");
+																																									                    printf("Rex: What the heck you idiot, almost made me waste a potion on you!\n");
+																																											                    }
+
+																																		                    else
+																																					                    {
+																																								                        hp = hp +12;
+																																											                    printf("> You were healed with +12 potion\n");
+																																													                    }
+
+																																				                    char result = bossMove();
+																																						                    printf("%c\n", result);
+
+																																								                    switch(result)
+																																											                    {
+																																														                        case 'a':
+																																																		                    {
+																																																					                            int guardcheck = agility + defense;
+
+																																																								                            if(guardcheck > 20)
+																																																												                            {
+																																																																                                int enemyhit = rand() % 10 + 1;
+
+																																																																				                            hp = hp - enemyhit;
+
+																																																																							                                printf("> The enemy did %d damage to you!\n", enemyhit);
+																																																																											                        }
+
+																																																											                            else
+																																																															                            {
+																																																																			                                int enemyhit = (defense + agility) - bossattack;
+
+																																																																							                            hp = hp - enemyhit;
+
+																																																																										                                printf("> The enemy did %d damage to you!\n", enemyhit);
+																																																																														                        }
+																																																														                            break;
+																																																																	                        }
+																																																				                        case 'm':
+																																																				                        {
+																																																								                        int bossspell = rand() % 4;
+
+																																																											                        printf("> The Madam Dawn");
+																																																														                        printf(" attempted to use magic\n");
+
+																																																																	                        if(bossspell == 0)
+																																																																					                        {
+																																																																									                            int cure = rand() % 10;
+
+																																																																												                                int levelofcure = cure % 3;
+
+																																																																																                            printf("> The Madam Dawn uses cure\n");
+
+																																																																																			                                if(bosshp >= maxhp)
+																																																																																								                            {
+																																																																																												                                    printf("> But she is already at max health\n");
+																																																																																																                                }
+
+																																																																																							                            else
+																																																																																											                                {
+																																																																																																                                if(levelofcure == 0)
+																																																																																																					                                {
+																																																																																																										                                    bosshp = bosshp + 10;
+																																																																																																														                                        printf("> She is healed with +10\n");
+																																																																																																																			                                }
+																																																																																																				                                else if(levelofcure == 1)
+																																																																																																									                                {
+																																																																																																														                                    bosshp = bosshp + 7;
+																																																																																																																		                                        printf("> She is healed with +7\n");
+																																																																																																																							                                }
+																																																																																																								                                else
+																																																																																																													                                {
+																																																																																																																		                                    bosshp = bosshp +5;
+																																																																																																																						                                        printf("> She is healed with +5\n");
+																																																																																																																											                                }
+
+																																																																																																												                            }
+																																																																																										                            }
+
+																																																																				                        else if(bossspell == 1)
+																																																																								                        {
+
+																																																																												                            int icemagic = rand() % 7 + 4;
+
+																																																																															                                icemagic = icemagic + magic;
+
+																																																																																			                            int damage = defense - icemagic;
+
+																																																																																						                                if(damage < 8)
+																																																																																											                            {
+																																																																																															                                    hp = hp - abs(icemagic);
+																																																																																																			                                    printf("> The Madam Dawn used ice spell and did -%d damage to you\n", icemagic);
+																																																																																																							                                }
+																																																																																										                            else
+																																																																																														                                {
+																																																																																																			                                hp = hp - abs(damage);
+																																																																																																							                                printf("> The Madam Dawn used ice spell and did -%d damage to you\n", abs(damage));
+																																																																																																											                            }
+																																																																																													                            }
+
+																																																																							                        else
+																																																																											                        {
+																																																																															                            int firemagic = rand() % 7 + 4;
+
+																																																																																		                                firemagic = firemagic + magic;
+
+																																																																																						                            int damage = defense - firemagic;
+
+																																																																																									                                if(damage < 8)
+																																																																																														                            {
+																																																																																																		                                    hp = hp - abs(firemagic);
+																																																																																																						                                    printf("> The Madam Dawn used fireball and did -%d damage to you\n", firemagic);
+																																																																																																										                                }
+																																																																																													                            else
+																																																																																																	                                {
+																																																																																																						                                hp = hp - abs(damage);
+																																																																																																										                                printf("> The Madam Dawn used fireball and did -%d damage to you\n", abs(damage));
+																																																																																																														                            }
+																																																																																																                            }
+
+																																																																										                        break;
+																																																																													                    }
+																																																							                    case 'g':
+																																																							                    {
+																																																										                            printf("> The Madam Dawn guarded herself.\n");
+																																																													                            break;
+																																																																                        }
+																																																									                        default:
+																																																									                        {
+																																																													                        printf(">: The Madam Dawn uses an item\n");
+
+																																																																                        if(bosshp >= bossmaxhp)
+																																																																				                        {
+																																																																								                            printf("> The Madam Dawn health is full\n");
+																																																																											                            }
+																																																																			                        else
+																																																																							                        {
+																																																																											                            bosshp = bosshp + 10;
+
+																																																																														                                printf("> The Madam Dawn health went up by +10.\n");
+																																																																																		                        }
+																																																																						                    }
+																																																												                }
+																																										                    break;
+																																												                }
+																													                case 4:
+																													                {
+																																                printf("> You decided to guard\n");
+
+																																		                char result = bossMove();
+																																				                printf("%c\n", result);
+
+																																						                switch(result)
+																																									                {
+																																												                    case 'a':
+																																															                        {
+																																																			                        int enemyhit = rand() % 12 + 7;
+
+																																																						                        hp = hp - enemyhit;
+																																																									                        printf("> The enemy did %d damage to you!\n", enemyhit);
+
+																																																												                        break;
+																																																															                    }
+																																																		                    case 'm':
+																																																		                    {
+																																																					                            int bossspell = rand() % 4;
+
+																																																								                            printf("> The Madam Dawn");
+																																																											                            printf(" attempted to use magic\n");
+
+																																																														                            if(bossspell == 0)
+																																																																		                            {
+																																																																						                                int cure = rand() % 10;
+
+																																																																										                            int levelofcure = cure % 3;
+
+																																																																													                                printf("> The Madam Dawn uses cure\n");
+
+																																																																																	                            if(bosshp >= maxhp)
+																																																																																					                                {
+																																																																																										                                printf("> But she is already at max health\n");
+																																																																																														                            }
+
+																																																																																				                                else
+																																																																																									                            {
+																																																																																													                                    if(levelofcure == 0)
+																																																																																																		                                    {
+																																																																																																							                                        bosshp = bosshp + 10;
+																																																																																																												                                    printf("> She is healed with +10\n");
+																																																																																																																                                    }
+																																																																																																	                                    else if(levelofcure == 1)
+																																																																																																						                                    {
+																																																																																																											                                        bosshp = bosshp + 7;
+																																																																																																																                                    printf("> She is healed with +7\n");
+																																																																																																																				                                    }
+																																																																																																					                                    else
+																																																																																																										                                    {
+																																																																																																															                                        bosshp = bosshp +5;
+																																																																																																																				                                    printf("> She is healed with +5\n");
+																																																																																																																								                                    }
+
+																																																																																																									                                }
+																																																																																								                        }
+
+																																																																	                            else if(bossspell == 1)
+																																																																					                            {
+																																																																									                                int icemagic = rand() % 3;
+
+																																																																													                            icemagic = icemagic + magic;
+
+																																																																																                                int damage = defense - icemagic;
+
+																																																																																				                            hp = hp - damage;
+																																																																																							                                printf("> She used fireball and did +%d damage to the enemy\n", damage);
+																																																																																											                        }
+
+																																																																				                            else
+																																																																								                            {
+																																																																												                                int firemagic = rand() % 3;
+
+																																																																																                            firemagic = firemagic + magic;
+
+																																																																																			                                int damage = defense - firemagic;
+
+																																																																																							                            hp = hp - damage;
+																																																																																										                                printf("> She used fireball and did +%d damage to the enemy\n", damage);
+																																																																																														                        }
+
+																																																																							                            break;
+																																																																										                        }
+																																																				                        case 'g':
+																																																				                        {
+																																																								                        printf("> The Madam Dawn guarded itself\n");
+
+																																																											                        break;
+																																																														                    }
+																																																							                    default:
+																																																							                    {
+																																																										                            printf(">: The Madam Dawn uses an item\n");
+
+																																																													                            if(bosshp >= bossmaxhp)
+																																																																	                            {
+																																																																					                                printf("> The Madam Dawn health is full\n");
+																																																																									                        }
+																																																																                            else
+																																																																				                            {
+																																																																								                                bosshp = bosshp + 10;
+
+																																																																												                            printf("> The Madam Dawn health went up by +10.\n");
+																																																																															                            }
+																																																																			                        }
+																																																									                    }
+
+																																								                break;
+																																										            }
+																															            case 5:
+																															            {
+																																	                    printf("Rex: Let me break it out to you!\n\n");
+																																			                    printf("Your Stats:\n");
+																																					                    printf("Level: %d\nHP: %d\nAttack: %d\nDefense: %d\nMagic: %d\nAgility: %d\nLuck: %d\n",level,hp,attack,defense,magic,agility,luck);
+
+																																							                    printf("\n");
+																																									                    printf("Madam Dawn Stats:\n");
+																																											                    printf("Level: ??\nHP: %d\nAttack: %d\nDefense: %d\nMagic: %d\nAgility: %d\nLuck: %d\n",bosshp,bossattack,bossdefense,bossmagic,bossagility,bossluck);
+
+																																													                    printf("\n");
+
+																																															                    break;
+																																																	                }
+																																                default:
+																																                {
+																																			                printf("> Wrong input please try again!\n");
+																																					            }
+																																		        }
+																			        }
+
+												    if(bosshp < 0)
+													        {
+															        printf("\nCongrats, you defeated the enemy\n\n");
+																        printf("Rex: I guess this is the end of your journey. thank you so much for helping me in defeating this enemy!\n");
+																	        printf("> The mage casted a spell and sent you back home now choosing other doors for your next adventure!\n");
+																		    }
+
+												        else
+														    {
+															            printf("Rex: Oh no!! This is not how it suppose to end!\n");
+
+																        }
+}
+
+
+
 
 
 
@@ -3655,6 +5240,7 @@ void eyeGame(void)
 		puts("You lose. Try again.");
   	}
 }
+
 
 
 void generateGold() {
@@ -5670,6 +7256,77 @@ int factorial(int n){
     for (int i = 1; i <= n; i++) { 
         num *= i;
     }
-    
+   
     return num;
+
 }
+void doorChoiceRoom9()
+{
+	    puts("you find yourself in a futuristic cubed room with one door on each side and a circular latched door below you.");
+	        puts("you have no recollection as to how you've ended up in such a predicament.");
+		    puts("Sudenly, a voice calls out notifying you that the experiment will start in 5...4...3...2...1");
+		        puts("Spikes emerge from circular holes in the ceiling, you have to decide on one of five doors in order to escape the death trap.");
+			    
+}
+
+void func37()
+{
+	puts("Executing Order 66!!!");
+}
+
+int i_want_to_go_home_grandpa(){
+    puts("\n1: Do you want to feed the Jason?\
+            \n2: Don't feed Jason.\
+            \n3: Did he really say McDonalds better than Jack'n Box?\
+            \n4: Funkos are the best!\
+            \n5: Deku says Jason is cool!\n");
+
+    int choice = 0;
+    scanf("\n%d: ", &choice);
+
+    if (choice == 1)
+    {
+        puts(  "\nWell well well... \
+                \nLooks like we got a loop going on here... \
+                \nWhat will you do next?\
+                \n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+        return 0;
+    }
+    else if (choice == 2)
+    {
+        puts(  "\nWell well well... \
+                \nLooks like we got a loop going on here... \
+                \nWhat will you do next?\
+                \n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+        return 1;
+    }
+    else if (choice == 3)
+    {
+        puts(  "\nWell well well... \
+                \nLooks like we got a loop going on here... \
+                \nWhat will you do next?\
+                \n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+        return 2;
+    }
+    else if (choice == 4)
+    {
+        puts(  "\nWell well well... \
+                \nLooks like we got a loop going on here... \
+                \nWhat will you do next?\
+                \n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+        return 3;
+    }
+    else if (choice == 5)
+    {
+        puts(  "\nWell well well... \
+                \nLooks like we got a loop going on here... \
+                \nWhat will you do next?\
+                \n~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ");
+        return 4;
+    }
+    return 10;
+}
+
+
+
+
